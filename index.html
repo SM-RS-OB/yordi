@@ -9,7 +9,8 @@
             margin: 0;
             padding: 0;
             background-color: #ededed;
-            color: #333;background-image: -moz-radial-gradient(sans-serif);
+            color: #333;
+            /* background-image: -moz-radial-gradient(sans-serif); Removed as it's not standard and might cause issues */
         }
 
         header {
@@ -21,16 +22,31 @@
 
         .container {
             width: 80%;
+            max-width: 960px; /* Added max-width for better responsiveness */
             margin: 20px auto;
         }
 
         h2 {
             border-bottom: 2px solid #333;
             padding-bottom: 5px;
+            margin-top: 40px; /* Added some top margin to section titles */
         }
 
         .about {
             margin-bottom: 40px;
+            overflow: auto; /* To contain the floated profile picture */
+        }
+
+        /* Profile Picture Styles */
+        .profile-picture {
+            width: 150px; /* Adjust size as needed */
+            height: 150px; /* Adjust size as needed */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            float: left; /* Floats the image to the left */
+            margin-right: 20px; /* Space between image and text */
+            margin-bottom: 10px; /* Space below image if text is short */
+            border: 3px solid #6523c9; /* Optional border matching header color */
         }
 
         .skills {
@@ -39,6 +55,9 @@
 
         .skill-bar {
             margin: 10px 0;
+        }
+        .skill-bar p { /* Added margin to skill name for better spacing */
+            margin-bottom: 5px;
         }
 
         .bar {
@@ -55,12 +74,15 @@
             color: white;
             padding-left: 10px;
             line-height: 25px;
+            text-align: center; /* Center the percentage text */
+            font-size: 0.9em; /* Slightly smaller font for percentage */
         }
 
         .contact {
             background-color: #eee;
             padding: 20px;
             border-radius: 5px;
+            clear: both; /* Ensure it clears any floats if needed */
         }
 
         footer {
@@ -69,6 +91,23 @@
             text-align: center;
             padding: 10px 0;
             margin-top: 40px;
+        }
+
+        /* Basic Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .profile-picture {
+                float: none; /* Stack image above text */
+                display: block; /* Make it a block element */
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px; /* More space below on mobile */
+            }
+            .container {
+                width: 90%;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
@@ -82,7 +121,9 @@
     <div class="container">
         <section class="about">
             <h2>About Me</h2>
-            <p>Hi, I'm Yordanos, and while I enjoy my studies, the most meaningful part of my life is worshiping God. There's a profound peace and joy I find in those moments, whether it's through singing praises, quiet prayer, or fellowship with others. It’s what truly grounds me and fills my days with a sense of purpose and strength that goes beyond anything else. as well as passionate web developer with experience in creating clean and user-friendly websites using HTML, CSS, and JavaScript. I love bringing ideas to life on the browser!</p>
+            <!-- Profile Picture Holder -->
+            <img src="photo.jpg" alt="Yordanos Yacob - Profile Picture" class="profile-picture">
+            <p>Hi, I'm Yordanos, and while I enjoy my studies, the most meaningful part of my life is worshiping God. There's a profound peace and joy I find in those moments, whether it's through singing praises, quiet prayer, or fellowship with others. It’s what truly grounds me and fills my days with a sense of purpose and strength that goes beyond anything else. As well as passionate web developer with experience in creating clean and user-friendly websites using HTML, CSS, and JavaScript. I love bringing ideas to life on the browser!</p>
         </section>
 
         <section class="skills">
@@ -100,20 +141,20 @@
                 <div class="bar"><span style="width: 70%;">70%</span></div>
             </div>
             <div class="skill-bar">
-                <p>singing & prayer</p>
+                <p>Singing & Prayer</p>
                 <div class="bar"><span style="width: 100%;">100%</span></div>
             </div>
         </section>
 
         <section class="contact">
             <h2>Contact Me</h2>
-            <p>Email: yordi12@Gmail.com</p>
-            <p>Phone: +123 456 7890</p>
+            <p>Email: yordiyaecob3754@gmail.com</p>
+            <p>Phone: +251976072607</p>
         </section>
     </div>
 
     <footer>
-        <p>© 2025 Yordanos yacob. All rights reserved.</p>
+        <p>© 2025 Yordanos Yacob. All rights reserved.</p>
     </footer>
 
 </body>
