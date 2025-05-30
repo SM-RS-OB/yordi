@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yordanos Yacob - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fa; /* Slightly lighter background */
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 85%; /* Slightly wider */
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px; /* Added some padding */
+        }
+
+        header {
+            background: linear-gradient(to right, #6523c9, #8e44ad); /* Gradient header */
+            color: white;
+            padding: 25px 0; /* Increased padding */
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            border-bottom: 4px solid #531aa8;
+        }
+        header h1 {
+            margin: 0 0 5px 0;
+            font-size: 2.2em; /* Adjusted size */
+            font-weight: 700; /* Bolder */
+        }
+        header p {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 300; /* Lighter subtitle */
+        }
+
+        /* Basic Navigation */
+        nav.main-nav {
+            background-color: #531aa8; /* Darker purple for nav */
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        nav.main-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav.main-nav ul li {
+            display: inline-block; /* Horizontal layout */
+            margin: 0 15px;
+        }
+        nav.main-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        nav.main-nav ul li a:hover,
+        nav.main-nav ul li a.active { /* Style for active link */
+            background-color: #fff;
+            color: #6523c9;
+        }
+
+
+        section { /* General section styling */
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        h2.section-title { /* Standardized section title */
+            font-size: 1.8em;
+            color: #6523c9; /* Match header color */
+            border-bottom: 3px solid #eee; /* Lighter border */
+            padding-bottom: 10px;
+            margin-top: 0; /* Remove default top margin if section has padding */
+            margin-bottom: 25px;
+            text-align: center; /* Center section titles */
+        }
+
+        .about {
+            overflow: auto;
+        }
+
+        .profile-picture {
+            width: 180px; /* Slightly larger */
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: left;
+            margin-right: 25px;
+            margin-bottom: 15px;
+            border: 4px solid #fff; /* White border for contrast */
+            box-shadow: 0 0 15px rgba(101, 35, 201, 0.4); /* Subtle glow */
+        }
+
+        .about p {
+            text-align: justify;
+            color: #555; /* Slightly lighter text for paragraphs */
+        }
+
+        footer {
+            background-color: #2c3e50; /* Darker footer */
+            color: #ecf0f1; /* Lighter text */
+            text-align: center;
+            padding: 20px 0; /* Increased padding */
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .profile-picture {
+                float: none;
+                display: block;
+                margin: 0 auto 25px auto;
+            }
+            .container {
+                width: 90%;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            nav.main-nav ul li {
+                display: block; /* Stack nav items */
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>YORDANOS YACOB</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="about">
+            <h2 class="section-title">About Me</h2>
+            <img src="photo.jpg" alt="Yordanos Yacob - Profile Picture" class="profile-picture">
+            <p>Hi, I'm Yordanos, and while I enjoy my studies, the most meaningful part of my life is worshiping God. There's a profound peace and joy I find in those moments, whether it's through singing praises, quiet prayer, or fellowship with others. It’s what truly grounds me and fills my days with a sense of purpose and strength that goes beyond anything else.</p>
+            <p>As well as being deeply spiritual, I am a passionate web developer with emerging experience in creating clean and user-friendly websites. I enjoy working with technologies like HTML, CSS, and JavaScript, and I love the process of bringing ideas to life on the browser. I am a dedicated learner, always eager to explore new tools and techniques to improve my craft.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© <span id="currentYear"></span> Yordanos Yacob. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
